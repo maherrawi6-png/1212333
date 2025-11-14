@@ -1,0 +1,13 @@
+#!/bin/bash
+# Gradle Wrapper script for Unix-like operating systems (Linux/macOS)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DEFAULT_JVM_OPTS="-Duser.home=$DIR/.gradle"
+DEFAULT_GRADLE_OPTS="-Dgradle.home=$DIR/gradle"
+DEFAULT_GROOVY_OPTS="-Dgroovy.home=$DIR/groovy"
+DEFAULT_PATH="$DIR/gradle:$DIR/bin:$PATH"
+export JAVA_HOME="$JAVA_HOME"
+
+echo "Gradle wrapper started"
+
+# Running gradle tasks
+$DIR/gradle/bin/gradle "$@"
