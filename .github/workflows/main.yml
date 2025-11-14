@@ -15,6 +15,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Install Gradle
+        run: |
+          wget https://services.gradle.org/distributions/gradle-8.5-bin.zip
+          unzip gradle-8.5-bin.zip
+          sudo mv gradle-8.5 /opt/gradle
+          sudo ln -s /opt/gradle/bin/gradle /usr/local/bin/gradle
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
         with:
